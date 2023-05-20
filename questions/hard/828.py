@@ -81,7 +81,7 @@ class Solution:
 # %%
 sol = Solution()
 # %%
-sol.countUniqueChars("LEETCODE")
+sol.uniqueLetterString("LEETCODE")
 # %%
 sol.uniqueLetterString("ABA")
 
@@ -106,6 +106,9 @@ class Solution:
             res += temp
             aap[pos] = (i-prepos, i)
         return res
+# %%
+sol = Solution()
+sol.uniqueLetterString("ABCii")
 # %%
 class Solution:
     def uniqueLetterString(self, s: str) -> int:
