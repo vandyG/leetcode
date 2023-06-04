@@ -16,3 +16,22 @@
 # 
 # Input: root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]
 # Output: false
+# %%
+# Definition for a binary tree node.
+from typing import Optional
+
+
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+    
+    def __eq__(self, __value: object) -> bool:
+        pass    
+
+class Solution:
+
+    def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+        pass
+        
