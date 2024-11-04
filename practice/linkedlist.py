@@ -31,3 +31,37 @@ class LinkedList:
             node = node.next
         return count
 
+    def prepend(self, val):
+        node = Node(val)
+        node.next = self.head
+        self.head = node
+    
+    def append(self, value):
+        node = Node(value)
+        if not self.head:
+            self.head = node
+            return
+        current = self.head
+        while current.next:
+            current = current.next
+        current.next = node
+    
+    def insert(self, value, index):
+        
+        if index < 0 or index > self.length:
+            raise IndexError("Index out of range")
+        
+        if index == 0:
+            self.prepend(value)
+            return
+        
+        node = Node(value)
+        current = self.head
+        for _ in range(index - 1):
+            current = current.next
+        node.next = current.next
+        current.next = node
+
+    def delete(self, index):
+        node = self.head
+        pass
